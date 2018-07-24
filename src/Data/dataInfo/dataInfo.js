@@ -1,7 +1,10 @@
 const data = [
-    {music: 'faruk-sabanci-feat-mingue-your-call', preview: 'Faruk Sabanci', title: 'Somebody description about music'},
-    {music: 'ka-re-половина', preview: 'Ka-Re', title: 'Somebody description about music' },
-    {music: 'kygo-and-imagine-dragons-born-to-be-yours', preview: 'Kygo-Imagine-Dragons-Born-to-be-Yours', title: 'Somebody description about music' }
+    {list: ['audio1.mp3','audio2.mp3','audio3.mp3','audio4.mp3','audio5.mp3'], preview: 'genreDay.jpg', title: 'Жанр дня', id: 'genreDay'},
+    {preview: 'festival.jpg', title: 'Фестивальная', id: 'festival' },
+    {preview: 'summer.jpg', title: 'Летняя', id: 'summer' },
+    {preview: 'inTrend.jpg', title: 'В тренде', id: 'inTrend' },
+    {preview: 'eveningHits.jpg', title: 'Вечерние хиты', id: 'eveningHits' },
+    {preview: 'background.jpg', title: 'Фоновая', id: 'background' },
 ];
 
 export default data;

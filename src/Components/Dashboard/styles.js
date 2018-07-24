@@ -3,7 +3,7 @@ const styles = theme => ({
         ...theme.mixins.gutters(),
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
-        flexGrow: 1
+        flexGrow: 1,
     },
 });
 

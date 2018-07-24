@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.4.0",
+    "play-sound": "^1.1.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-player": "^1.6.4",
     "react-scripts": "1.1.4"
   },
   "scripts": {

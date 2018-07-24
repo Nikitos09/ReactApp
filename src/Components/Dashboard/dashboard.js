@@ -8,6 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import Data from '../../Data/dataInfo/dataInfo';
 
 import GenreCard from '../GenreCard';
+import './styles.css';
 
 
 
@@ -24,11 +25,11 @@ class Dashboard extends Component {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                <Paper className={classes.root} elevation={1}>
+                <Paper className={classes.root + ' AppWrapper'} elevation={1} id={'AppWrapper'}>
                     {
-                        Data.map(function(musicData){
-                            return (<GenreCard value={musicData}/>)
-                    })
+                        Data.map((musicData) =>
+                             <GenreCard value={musicData}/>
+                        )
                     }
                 </Paper>
             </div>

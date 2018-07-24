@@ -1,0 +1,8 @@
+.AppWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.CardImage {
+    width: 100%;
+    height: 200px;
+}
