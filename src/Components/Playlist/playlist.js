@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import Card from '@material-ui/core/Card';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 
 import Player from '../Player';
+import ListItem from '../ListItem';
 
 import './styles.css';
 
@@ -12,9 +12,11 @@ import './styles.css';
 
 class Playlist extends Component {
     render(){
+        console.log(123);
+        console.log(this.props.history);
+        const {value} = this.props.history.state;
+        console.log(this.props.history);
 
-        const {value, classes, theme} = this.props;
-        const {music} = this.props.value.list;
         return(
             <div className={'playlistWrapper'}>
                 <Card className={'playlistTitle'}>
@@ -27,9 +29,7 @@ class Playlist extends Component {
                 <List className={'playlistList'}>
                     {
                         this.props.value.list.map((music)=>
-                            <ListItem value={music}>
-                                {'I am ' + music}
-                            </ListItem>
+                            <ListItem value={music} />
                         )
                     }
                 </List>

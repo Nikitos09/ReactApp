@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
+import { Switch, BrowserRouter, Route, Link } from 'react-router-dom'
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
 
-import Data from '../../Data/dataInfo/dataInfo';
-
-import GenreCard from '../GenreCard';
 import './styles.css';
+import Playlist from "../Playlist";
+import AppPaper from "../AppPaper";
 
 
 
 
 class Dashboard extends Component {
     render() {
-        const {classes} = this.props;
         return (
             <div className='Wrapper'>
                 <AppBar position="static">
@@ -25,16 +23,16 @@ class Dashboard extends Component {
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                <Paper className={classes.root + ' AppWrapper'} elevation={1} id={'AppWrapper'}>
-                    {
-                        Data.map((musicData) =>
-                             <GenreCard value={musicData}/>
-                        )
-                    }
-                </Paper>
+
+                <Switch>
+                    <Route exact path='/' component={AppPaper}/>
+                    <Route exact path='/playlist' component={Playlist}/>
+                </Switch>
             </div>
         );
     }
+
+
 }
 
 export default Dashboard;

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import history from "../../history"
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-
-import Playlist from '../Playlist';
 
 import './styles.css';
 
@@ -19,7 +17,8 @@ class GenreCard extends Component {
     }
 
     openPlaylist(){
-        ReactDOM.render(<Playlist value = {this.props.value}/>, document.getElementById('AppWrapper'));
+        debugger;
+        history.push("/playlist");
     }
 
     render() {
