@@ -9,7 +9,6 @@ import ListItem from '../ListItem';
 import './styles.css';
 
 
-
 class Playlist extends Component {
     render(){
         const {value} = this.props.location.state;
@@ -30,11 +29,9 @@ class Playlist extends Component {
                         )
                     }
                 </List>
-
             </div>
         );
     }
-
 }
 
 export default Playlist;

@@ -1,7 +1,4 @@
-.cardLink {
-    text-decoration: none;
-    cursor: pointer;
-}
-.cardImage {
-
+.playerWrapper {
+    padding: 10px;
+    margin: 20px auto;
 }

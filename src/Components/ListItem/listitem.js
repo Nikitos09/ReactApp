@@ -5,7 +5,6 @@ import Card from '@material-ui/core/Card';
 import './styles.css';
 
 
-
 class ListItem extends Component {
 
     render(){
@@ -20,7 +19,6 @@ class ListItem extends Component {
             </Card>
         );
     }
-
 }
 
 export default ListItem;
