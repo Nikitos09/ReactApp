@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, BrowserRouter, Route, Link } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,8 +10,6 @@ import Playlist from "../Playlist";
 import AppPaper from "../AppPaper";
 
 
-
-
 class Dashboard extends Component {
     render() {
         return (
@@ -19,7 +17,9 @@ class Dashboard extends Component {
                 <AppBar position="static">
                     <Toolbar variant="dense">
                         <Typography variant="title" color="inherit">
-                            Music
+                            <Link to={{pathname:'/'}}>
+                                <h4 className={'DashboardTitle'}>Music</h4>
+                            </Link>
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -31,8 +31,6 @@ class Dashboard extends Component {
             </div>
         );
     }
-
-
 }
 
 export default Dashboard;

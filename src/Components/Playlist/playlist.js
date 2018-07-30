@@ -12,15 +12,12 @@ import './styles.css';
 
 class Playlist extends Component {
     render(){
-        console.log(123);
-        console.log(this.props.history);
-        const {value} = this.props.history.state;
-        console.log(this.props.history);
+        const {value} = this.props.location.state;
 
         return(
             <div className={'playlistWrapper'}>
                 <Card className={'playlistTitle'}>
-                    <img src={require('../../Data/preview/' + value.preview)} className={'playlistImage'}/>
+                    <img src={require('../../Data/preview/' + value.preview)} className={'playlistImage'} alt={'PlaylistImage'}/>
                     <div>
                         <h1>{value.title}</h1>
                         <Player value = {value}/>
@@ -28,8 +25,8 @@ class Playlist extends Component {
                 </Card>
                 <List className={'playlistList'}>
                     {
-                        this.props.value.list.map((music)=>
-                            <ListItem value={music} />
+                        value.list.map((music)=>
+                            <ListItem value={music} key={music.id}/>
                         )
                     }
                 </List>
