@@ -11,14 +11,12 @@ import './styles.css';
 
 class Playlist extends Component {
     state = {
-        currentRecord: 'Lalala'
-    }
+        currentRecord: 'Музыка для Вас...'
+    };
 
     changeCurrentRecord = (value) => {
         this.setState({currentRecord: value});
-        debugger
-        console.log(this.state);
-    }
+    };
 
 
     render(){
@@ -30,7 +28,7 @@ class Playlist extends Component {
                     <img src={require('../../Data/preview/' + value.preview)} className={'playlistImage'} alt={'PlaylistImage'}/>
                     <div>
                         <h1>{value.title}</h1>
-                        <Player value = {value}/>
+                        <Player value = {value} currentRecord = {this.state.currentRecord}/>
                     </div>
                 </Card>
                 <List className={'playlistList'}>
