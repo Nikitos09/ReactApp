@@ -9,12 +9,13 @@ class Player extends Component {
 
     render() {
         const {classes, value} = this.props;
-        const fileDir = '../../Data/audio/' + value.id;
+        const fileDir = require('../../Data/audio/' + value.id + '/audio1.mp3');
 
         return (
             <div>
                 <audio className={'playerWrapper'} controls>
-                    <source type={'audio/mp3'} src={'../../Data/audio/genreDay/audio1.mp3'}/>
+                    <source type={'audio/mp3'} src={fileDir}/>
+                    Обновите ваш браузер
                 </audio>
             </div>
         );

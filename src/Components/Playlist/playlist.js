@@ -10,6 +10,17 @@ import './styles.css';
 
 
 class Playlist extends Component {
+    state = {
+        currentRecord: 'Lalala'
+    }
+
+    changeCurrentRecord = (value) => {
+        this.setState({currentRecord: value});
+        debugger
+        console.log(this.state);
+    }
+
+
     render(){
         const {value} = this.props.location.state;
 
@@ -25,7 +36,7 @@ class Playlist extends Component {
                 <List className={'playlistList'}>
                     {
                         value.list.map((music)=>
-                            <ListItem value={music} key={music.id}/>
+                            <ListItem value={music} key={music.id} changeCurrentRecord = {this.changeCurrentRecord}/>
                         )
                     }
                 </List>

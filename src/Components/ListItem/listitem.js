@@ -7,15 +7,17 @@ import './styles.css';
 
 class ListItem extends Component {
 
+
     render(){
-        const {value} = this.props;
-        let name = value.split('.');
-            name = name[0];
+        const {value, changeCurrentRecord} = this.props;
+        const currentRecord = value.name;
 
         return(
-            <Card className={'listItem'}>
+            <Card className={'listItem'} onClick={()=>{
+                changeCurrentRecord(currentRecord)
+            }}>
                 <button>►</button>
-                <h4>{name}</h4>
+                <h4>{currentRecord}</h4>
             </Card>
         );
     }
