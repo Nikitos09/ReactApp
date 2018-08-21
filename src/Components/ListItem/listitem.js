@@ -9,15 +9,16 @@ class ListItem extends Component {
 
 
     render(){
-        const {value, changeCurrentRecord} = this.props;
-        const currentRecord = value.name;
+        const {changeCurrentRecord, buttonImage} = this.props;
+        const currentRecord = this.props.value;
 
+        console.log(this.props);
         return(
             <Card className={'listItem'} onClick={()=>{
-                changeCurrentRecord(currentRecord)
+                changeCurrentRecord(currentRecord, buttonImage)
             }}>
-                <button>►</button>
-                <h4>{currentRecord}</h4>
+                <button>{buttonImage}</button>
+                <h4>{currentRecord.name}</h4>
             </Card>
         );
     }

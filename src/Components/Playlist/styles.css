@@ -1,11 +1,12 @@
 .playlistWrapper {
-    width: 70%;
+    width: 80%;
     margin: 20px auto;
 }
 
 .playlistTitle {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .playlistTitle img{
@@ -20,3 +21,5 @@
 .currentRecord {
     margin: 0 20px;
 }
+
+
